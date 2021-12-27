@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const http = require("http").Server(app);
 const io = require("socket.io")(http);
-const path = require("path");
 
 const whitelist = ['http://localhost:3000', 'http://localhost:5000', 'https://das-quiz.herokuapp.com/'];
 const corsOptions = {
@@ -17,7 +16,6 @@ const corsOptions = {
     }
   }
 }
-app.use(cors(corsOptions))
 
 
 app.get("/api/customers", (req, res)=>{
