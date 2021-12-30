@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import socketIOClient from 'socket.io-client';
 import './App.css';
 import Start from './components/Start/Start';
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://das-quiz.herokuapp.com/";
 
 function App() {
   const socket  = socketIOClient(ENDPOINT);
